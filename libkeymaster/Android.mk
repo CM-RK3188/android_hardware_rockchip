@@ -17,7 +17,7 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-MOBICORE_PATH := hardware/rk29/mobicore
+MOBICORE_PATH := hardware/rockchip/mobicore
 
 LOCAL_MODULE := keystore.$(TARGET_BOARD_PLATFORM)
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw

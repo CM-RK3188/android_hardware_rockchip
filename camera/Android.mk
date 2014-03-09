@@ -17,9 +17,9 @@ LOCAL_C_INCLUDES += \
 	frameworks/base/include/ui \
   external/jpeg \
   external/jhead\
-  hardware/rk29/hwcomposer_rga\
-	hardware/rk29/libgralloc_ump/ump/include\
-	hardware/rk29/libon2
+  hardware/rockchip/hwcomposer_rga\
+	hardware/rockchip/libgralloc_ump/ump/include\
+	hardware/rockchip/libon2
 
 LOCAL_SHARED_LIBRARIES:= \
     libui \
@@ -35,14 +35,14 @@ LOCAL_SHARED_LIBRARIES:= \
     libdl
 
 endif
-ifeq ($(strip $(TARGET_BOARD_HARDWARE)),rk2928board)
+ifeq ($(strip $(TARGET_BOARD_HARDWARE)),rockchip28board)
 LOCAL_C_INCLUDES += \
     frameworks/base/include/ui \
   external/jpeg \
   external/jhead\
-  hardware/rk29/hwcomposer_rga\
-  hardware/rk29/libon2\
-  hardware/rk29/libgralloc_ump/ump/include
+  hardware/rockchip/hwcomposer_rga\
+  hardware/rockchip/libon2\
+  hardware/rockchip/libgralloc_ump/ump/include
 
 LOCAL_SHARED_LIBRARIES:= \
     libui \
@@ -59,7 +59,7 @@ LOCAL_SHARED_LIBRARIES:= \
     libdl
 
 endif
-ifeq ($(strip $(TARGET_BOARD_HARDWARE)),rk29board)    
+ifeq ($(strip $(TARGET_BOARD_HARDWARE)),rockchipboard)    
 LOCAL_C_INCLUDES += \
 	#frameworks/base/include/ui \
   frameworks/native/include/media/hardware \
@@ -85,12 +85,12 @@ ifeq ($(strip $(TARGET_BOARD_HARDWARE)),rk30board)
 LOCAL_CFLAGS += -DTARGET_RK30
 endif
 
-ifeq ($(strip $(TARGET_BOARD_HARDWARE)),rk2928board)
+ifeq ($(strip $(TARGET_BOARD_HARDWARE)),rockchip28board)
 LOCAL_CFLAGS += -DTARGET_RK30
 endif
 
-ifeq ($(strip $(TARGET_BOARD_HARDWARE)),rk29board) 
-LOCAL_CFLAGS += -DTARGET_RK29
+ifeq ($(strip $(TARGET_BOARD_HARDWARE)),rockchipboard) 
+LOCAL_CFLAGS += -DTARGET_rockchip
 endif
 
 ifeq ($(strip $(TARGET_BOARD_PLATFORM)),rk3188)
@@ -105,8 +105,8 @@ ifeq ($(strip $(TARGET_BOARD_PLATFORM)),rk30xx)
 LOCAL_CFLAGS += -DTARGET_BOARD_PLATFORM_RK30XX
 endif
 
-ifeq ($(strip $(TARGET_BOARD_PLATFORM)),rk2928)
-LOCAL_CFLAGS += -DTARGET_BOARD_PLATFORM_RK2928
+ifeq ($(strip $(TARGET_BOARD_PLATFORM)),rockchip28)
+LOCAL_CFLAGS += -DTARGET_BOARD_PLATFORM_rockchip28
 endif
 
 ifeq ($(strip $(TARGET_BOARD_PLATFORM)),rk30xxb)	
